@@ -1,0 +1,62 @@
+[
+  {
+    "id": "bm25",
+    "source": "retrieval-notes",
+    "text": "BM25 is a bag-of-words ranking function that scores documents by term frequency and inverse document frequency, with saturation so repeated terms give diminishing returns. It excels at exact keyword matches."
+  },
+  {
+    "id": "embeddings",
+    "source": "retrieval-notes",
+    "text": "A text embedding maps a piece of text to a dense vector so that semantically similar texts land close together. Similarity is usually measured with cosine distance between the vectors."
+  },
+  {
+    "id": "cosine",
+    "source": "math-notes",
+    "text": "Cosine similarity measures the angle between two vectors, ignoring their magnitude. When vectors are L2-normalized, cosine similarity reduces to a simple dot product."
+  },
+  {
+    "id": "vector-db",
+    "source": "systems-notes",
+    "text": "A vector database stores embeddings and supports approximate nearest-neighbour search at scale using indexes such as HNSW or IVF. Postgres with the pgvector extension is a popular choice."
+  },
+  {
+    "id": "rrf",
+    "source": "retrieval-notes",
+    "text": "Reciprocal Rank Fusion combines several ranked result lists by summing one over a constant plus each rank. It is robust because it fuses ranks rather than raw, incomparable scores."
+  },
+  {
+    "id": "hybrid",
+    "source": "retrieval-notes",
+    "text": "Hybrid search blends sparse lexical retrieval such as BM25 with dense vector retrieval. The lexical side catches rare exact terms while the dense side captures meaning and paraphrase."
+  },
+  {
+    "id": "rag",
+    "source": "llm-notes",
+    "text": "Retrieval augmented generation retrieves relevant passages from a corpus and passes them to a language model as context, grounding the answer in source material and reducing hallucination."
+  },
+  {
+    "id": "chunking",
+    "source": "llm-notes",
+    "text": "Chunking splits long documents into passages before embedding them. Chunk size trades recall against precision: small chunks localize answers, large chunks preserve context."
+  },
+  {
+    "id": "hnsw",
+    "source": "systems-notes",
+    "text": "HNSW builds a multi-layer proximity graph for approximate nearest-neighbour search, offering fast queries and high recall at the cost of extra memory for the graph structure."
+  },
+  {
+    "id": "tokenization",
+    "source": "nlp-notes",
+    "text": "Tokenization breaks text into units such as words or subwords. Subword tokenizers like Byte Pair Encoding keep vocabularies small while still representing rare or unseen words."
+  },
+  {
+    "id": "reranking",
+    "source": "retrieval-notes",
+    "text": "A reranker is a second-stage model, often a cross-encoder, that rescores an initial candidate set for higher precision. It is slower than first-stage retrieval, so it runs on few candidates."
+  },
+  {
+    "id": "evaluation",
+    "source": "retrieval-notes",
+    "text": "Retrieval quality is measured with metrics such as recall at k, mean reciprocal rank, and normalized discounted cumulative gain, computed against a labelled set of relevant documents."
+  }
+]
